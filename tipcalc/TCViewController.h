@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCViewController : UIViewController
+@interface TCViewController : UIViewController {
+    
+     IBOutlet UILabel *totalCost;
+     IBOutlet UILabel *perPersonCost;
+     IBOutlet UIPickerView *tipPicker;
+    
+}
+@property (weak, nonatomic) IBOutlet UITextField *costInput;
+@property (weak, nonatomic) IBOutlet UITextField *tipPercentField;
+@property (weak, nonatomic) IBOutlet UITextField *splitField;
 
 @end

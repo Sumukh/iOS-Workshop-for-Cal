@@ -1,23 +1,165 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="TCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGm-kS-mR5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Uhm-2f-Hi6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meal Cost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-Sa-xRB">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tip Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hju-Lc-tVW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="byK-vo-sMw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Split" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfO-sA-y5T">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="97s-uD-JhQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="fqn-iU-yfK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-EH-qVY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="Mfn-AO-KMY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1n9-Wg-KVD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="efG-H7-Dx8"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Meal Cost:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UI-4l-fx7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="PBw-Zk-LZN"/>
+                                    <constraint firstAttribute="height" constant="24" id="rJd-Fu-AAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Per person cost:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRs-8K-nNw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hoQ-ff-Mta"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="$95.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5r-rW-d2g">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8YB-Yv-Dve"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="$95.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="due-tH-oHe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UfT-eO-ZPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-7l-s3y">
+                                <items>
+                                    <navigationItem title="Title" id="mSu-2x-ujv"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="due-tH-oHe" firstAttribute="top" secondItem="3" secondAttribute="top" constant="252" id="2Kx-lQ-nk5"/>
+                            <constraint firstItem="mRR-Sa-xRB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="7aM-ff-dsS"/>
+                            <constraint firstItem="NEj-EH-qVY" firstAttribute="baseline" secondItem="zfO-sA-y5T" secondAttribute="baseline" type="default" id="7ki-hr-DUS"/>
+                            <constraint firstItem="B9E-7l-s3y" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="95D-Pj-zE8"/>
+                            <constraint firstItem="mRR-Sa-xRB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="62" id="964-lm-fk8"/>
+                            <constraint firstItem="B9E-7l-s3y" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="9KG-OZ-IOI"/>
+                            <constraint firstItem="97s-uD-JhQ" firstAttribute="leading" secondItem="Hju-Lc-tVW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9v0-or-qZz"/>
+                            <constraint firstItem="Q5r-rW-d2g" firstAttribute="trailing" secondItem="NEj-EH-qVY" secondAttribute="trailing" type="default" id="DAG-m9-7UG"/>
+                            <constraint firstItem="zfO-sA-y5T" firstAttribute="leading" secondItem="Hju-Lc-tVW" secondAttribute="leading" type="default" id="Fi4-cD-gcH"/>
+                            <constraint firstItem="due-tH-oHe" firstAttribute="leading" secondItem="Q5r-rW-d2g" secondAttribute="leading" type="default" id="Iov-nj-8he"/>
+                            <constraint firstItem="1n9-Wg-KVD" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="K69-jD-kLZ"/>
+                            <constraint firstItem="NEj-EH-qVY" firstAttribute="trailing" secondItem="97s-uD-JhQ" secondAttribute="trailing" type="default" id="KyZ-LK-DrE"/>
+                            <constraint firstItem="uRs-8K-nNw" firstAttribute="leading" secondItem="8UI-4l-fx7" secondAttribute="leading" type="default" id="Nt0-aH-dwa"/>
+                            <constraint firstItem="due-tH-oHe" firstAttribute="trailing" secondItem="Q5r-rW-d2g" secondAttribute="trailing" type="default" id="Th8-wF-HjJ"/>
+                            <constraint firstItem="B9E-7l-s3y" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Toq-gR-m7J"/>
+                            <constraint firstItem="Q5r-rW-d2g" firstAttribute="top" secondItem="3" secondAttribute="top" constant="213" id="WME-hZ-IJ2"/>
+                            <constraint firstItem="hGm-kS-mR5" firstAttribute="trailing" secondItem="97s-uD-JhQ" secondAttribute="trailing" type="default" id="WN3-a1-FNO"/>
+                            <constraint firstItem="hGm-kS-mR5" firstAttribute="leading" secondItem="mRR-Sa-xRB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="XGI-MT-zIG"/>
+                            <constraint firstItem="zfO-sA-y5T" firstAttribute="trailing" secondItem="mRR-Sa-xRB" secondAttribute="trailing" type="default" id="Z9L-xg-xiU"/>
+                            <constraint firstItem="uRs-8K-nNw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="253" id="ZbK-NK-XdG"/>
+                            <constraint firstItem="1n9-Wg-KVD" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="cxf-aV-hga"/>
+                            <constraint firstItem="NEj-EH-qVY" firstAttribute="top" secondItem="3" secondAttribute="top" constant="156" id="dAy-VY-HOy"/>
+                            <constraint firstItem="1n9-Wg-KVD" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="efV-md-2Vj"/>
+                            <constraint firstItem="97s-uD-JhQ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="108" id="evT-Aq-ejv"/>
+                            <constraint firstItem="Hju-Lc-tVW" firstAttribute="leading" secondItem="mRR-Sa-xRB" secondAttribute="leading" type="default" id="gUh-dv-LcH"/>
+                            <constraint firstItem="Hju-Lc-tVW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="112" id="gga-p3-yew"/>
+                            <constraint firstItem="uRs-8K-nNw" firstAttribute="trailing" secondItem="8UI-4l-fx7" secondAttribute="trailing" type="default" id="hnA-9M-oYo"/>
+                            <constraint firstItem="8UI-4l-fx7" firstAttribute="top" secondItem="3" secondAttribute="top" constant="205" id="hzD-RO-O7K"/>
+                            <constraint firstItem="Q5r-rW-d2g" firstAttribute="leading" secondItem="NEj-EH-qVY" secondAttribute="leading" type="default" id="jEV-eN-945"/>
+                            <constraint firstItem="mRR-Sa-xRB" firstAttribute="baseline" secondItem="hGm-kS-mR5" secondAttribute="baseline" type="default" id="leY-XA-qvP"/>
+                            <constraint firstItem="hGm-kS-mR5" firstAttribute="top" secondItem="3" secondAttribute="top" constant="58" id="uZ7-s2-72h"/>
+                            <constraint firstItem="8UI-4l-fx7" firstAttribute="leading" secondItem="zfO-sA-y5T" secondAttribute="leading" type="default" id="xZU-Xn-Ms9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="costInput" destination="hGm-kS-mR5" id="OQk-ml-dYX"/>
+                        <outlet property="perPersonCost" destination="due-tH-oHe" id="6Xf-si-o7x"/>
+                        <outlet property="splitField" destination="NEj-EH-qVY" id="uyN-e9-Qe0"/>
+                        <outlet property="tipPercentField" destination="97s-uD-JhQ" id="AM4-if-0fl"/>
+                        <outlet property="tipPicker" destination="1n9-Wg-KVD" id="ogf-RD-J7O"/>
+                        <outlet property="totalCost" destination="Q5r-rW-d2g" id="Gko-Qx-HX0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TCViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="costInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="perPersonCost" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="splitField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tipPercentField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tipPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="totalCost" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
